@@ -1,13 +1,16 @@
 import './App.css'
 
-const title = "React (Using Vite)";
+const welcome = {
+  greeting: 'Hey',
+  title : "React (Using Vite)",
+}
 
 function App() {
-  console.log(`title: ${title}`);
+  console.log(`${welcome.greeting}, ${welcome.title}`);
 
   return (
     <div>
-      <h1>Hello, {title}</h1>
+      <h1>{`${welcome.greeting}, ${welcome.title}`}</h1>
 
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />

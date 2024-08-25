@@ -6,11 +6,13 @@ const welcome = {
 }
 
 function App() {
-  console.log(`${welcome.greeting}, ${welcome.title}`);
+  const makeGreeting = () => {return `${welcome.greeting}, ${welcome.title}`;}
+
+  console.log(makeGreeting());
 
   return (
     <div>
-      <h1>{`${welcome.greeting}, ${welcome.title}`}</h1>
+      <h1>{makeGreeting()}</h1>
 
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />

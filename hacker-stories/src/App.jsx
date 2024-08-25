@@ -1,7 +1,8 @@
 import './App.css'
 
+const title = "React (Using Vite)";
+
 function App() {
-  const title = "React (Using Vite)";
   console.log(`title: ${title}`);
 
   return (

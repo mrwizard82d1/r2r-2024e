@@ -1,7 +1,8 @@
 import './App.css'
 
 function App() {
-  // Remember any JavaScript (TypeScript) code can go here.
+  const title = "React (Using Vite)";
+  console.log(`title: ${title}`);
 
   return (
     <div>

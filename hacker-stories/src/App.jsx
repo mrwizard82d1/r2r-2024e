@@ -48,12 +48,18 @@ const List = () => (
 )
 
 const Search = () => {
-  // Perform some task before returning a value
+  const handleChange = (event) => {
+    // Handling a synthetic event
+    console.log(event);
+
+    // Value of target (here: the input HTML element)
+    console.log(event.target.value);
+  }
 
   return (
     <div>
       <label htmlFor="search">Search: </label>
-      <input id="search" type="text"/>
+      <input id="search" type="text" onChange={handleChange} />
     </div>
   );
 }

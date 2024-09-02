@@ -23,14 +23,11 @@ function App() {
   return (
     <>
       <h1>My Hacker Stories</h1>
-      <div>
-        <label htmlFor="search">Search: </label>
-        <input id="search" type="text"/>
-      </div>
+      <Search/>
 
-      <hr/>
+      <hr />
 
-      <List/>
+      <List />
     </>
   )
 }
@@ -48,6 +45,13 @@ const List = () => (
       </li>)
     }
   </ul>
+)
+
+const Search = () => (
+  <div>
+    <label htmlFor="search">Search: </label>
+    <input id="search" type="text"/>
+  </div>
 )
 
 export default App

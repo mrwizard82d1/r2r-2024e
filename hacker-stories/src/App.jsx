@@ -32,12 +32,12 @@ function App() {
       <ul>
         {list.map((item) =>
           <li key={item.objectId}>
-            <a href={item.url}>
-              <div>{item.title}</div>
-              <div>Author: {item.author}</div>
-              <div>Comments: {item.num_comments}</div>
-              <div>Points: {item.points}</div>
-            </a>
+            <span>
+            <a href={item.url}>{item.title}</a>
+            </span>
+            <span>Author: {item.author}</span>
+            <span>Comments: {item.num_comments}</span>
+            <span>Points: {item.points}</span>
           </li>)
         }
       </ul>

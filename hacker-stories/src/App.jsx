@@ -23,12 +23,16 @@ function App() {
   console.log(list);
 
   return (
-    <div>
-      {list.map((element) => <h1 key={element.objectId}>{element.title}</h1>)}
-
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text" />
-    </div>
+    <>
+      <h1>My Hacker Stories</h1>
+      <div>
+        <label htmlFor="search">Search: </label>
+        <input id="search" type="text"/>
+      </div>
+      <ul>
+        {list.map((item) => <li key={item.objectId}>{item.title}</li>)}
+      </ul>
+    </>
   )
 }
 

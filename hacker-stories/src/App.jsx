@@ -20,8 +20,6 @@ const list = [
 ];
 
 function App() {
-  console.log(list);
-
   return (
     <>
       <h1>My Hacker Stories</h1>
@@ -29,20 +27,27 @@ function App() {
         <label htmlFor="search">Search: </label>
         <input id="search" type="text"/>
       </div>
-      <ul>
-        {list.map((item) =>
-          <li key={item.objectId}>
-            <span>
-            <a href={item.url}>{item.title}</a>
-            </span>
-            <span>Author: {item.author}</span>
-            <span>Comments: {item.num_comments}</span>
-            <span>Points: {item.points}</span>
-          </li>)
-        }
-      </ul>
+
+      <hr/>
+
+      <List/>
     </>
   )
 }
+
+const List = () => (
+  <ul>
+    {list.map((item) =>
+      <li key={item.objectId}>
+            <span>
+            <a href={item.url}>{item.title}i</a>
+            </span>
+        <span>Author: {item.author}</span>
+        <span>Comments: {item.num_comments}</span>
+        <span>Points: {item.points}</span>
+      </li>)
+    }
+  </ul>
+)
 
 export default App

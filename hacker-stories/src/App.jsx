@@ -30,7 +30,14 @@ function App() {
         <input id="search" type="text"/>
       </div>
       <ul>
-        {list.map((item) => <li key={item.objectId}>{item.title}</li>)}
+        {list.map((item) =>
+          <li key={item.objectId}>
+            <a href={item.url}>{item.title}</a>
+            <div>{item.author}</div>
+            <div>{item.num_comments}</div>
+            <div>{item.points}</div>
+          </li>)
+        }
       </ul>
     </>
   )

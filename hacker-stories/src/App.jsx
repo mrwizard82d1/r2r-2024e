@@ -37,7 +37,7 @@ const List = () => (
     {list.map((item) =>
       <li key={item.objectId}>
             <span>
-            <a href={item.url}>{item.title}i</a>
+            <a href={item.url}>{item.title}</a>
             </span>
         <span>Author: {item.author}</span>
         <span>Comments: {item.num_comments}</span>
@@ -47,11 +47,15 @@ const List = () => (
   </ul>
 )
 
-const Search = () => (
-  <div>
-    <label htmlFor="search">Search: </label>
-    <input id="search" type="text"/>
-  </div>
-)
+const Search = () => {
+  // Perform some task before returning a value
+
+  return (
+    <div>
+      <label htmlFor="search">Search: </label>
+      <input id="search" type="text"/>
+    </div>
+  );
+}
 
 export default App
